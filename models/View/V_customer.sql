@@ -1,0 +1,1 @@
+select customer_id, full_name from Customer_Sales.Customers
