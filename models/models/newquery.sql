@@ -7,6 +7,7 @@
 }}
 
 SELECT
+  c.customer_id,
   c.full_name,
   c.email_address,
   COUNT(o.CUSTOMER_ID) AS total_orders
@@ -17,5 +18,6 @@ LEFT JOIN
 ON
   c.customer_id = o.customer_id
 GROUP BY
+  c.customer_id,
   c.FULL_NAME,
   c.EMAIL_ADDRESS order by total_orders desc
